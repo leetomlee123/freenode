@@ -1,9 +1,9 @@
-# 公益免费v2ray节点订阅 每2小时更新 更新时间 2024-09-11 08:51:13
+# 公益免费v2ray节点订阅 每2小时更新 更新时间 2024-09-11 09:25:38
 所有v2ray免费节点都爬取自网络，请勿用于非法用途。电报地址：[v2ray免费节点每日更新 – Telegram](https://t.me/just_do_chat)
 | 客户端 | Android | Windows | iOS |
 | ---- | ---- | ---- | ---- |
-| v2ray | [v2rayNG](https://www.v2rayfree.eu.org/post/v2rayNg-tutorial/) | [v2rayN](https://www.v2rayfree.eu.org/post/v2rayN-tutorial/) | [OneClick](https://www.v2rayfree.eu.org/post/oneclick/) |
-## v2rayN使用教程：[点击查看](https://www.v2rayfree.eu.org/post/v2rayN-tutorial/)
+| v2ray | [v2rayNG](https://blog.colors.nyc.mn/posts/how-to-use-v2rayn/) | [v2rayN](https://blog.colors.nyc.mn/posts/how-to-use-v2rayn/) | [OneClick](https://blog.colors.nyc.mn/posts/how-to-use-v2rayn/) |
+## v2rayN使用教程：[点击查看](https://blog.colors.nyc.mn/posts/how-to-use-v2rayn//)
 ## 节点导入方法
 CTRL+A网页全选，CTRL+C复制，右键点击任务栏v2rayN客户端图标，左键点击从剪贴板批量导入URL，即可一键导入所有v2ray节点  
 ## v2ray免费节点订阅  
