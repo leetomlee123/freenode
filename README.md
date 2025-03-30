@@ -1,4 +1,4 @@
-# 公益免费v2ray节点订阅 每2小时更新 更新时间 2025-03-30 10:33:27
+# 公益免费v2ray节点订阅 每2小时更新 更新时间 2025-03-30 11:03:34
 所有v2ray免费节点都爬取自网络，请勿用于非法用途。电报地址：[v2ray免费节点每日更新 – Telegram](https://t.me/just_do_chat) 
 [自助订阅](https://share.colors.nyc.mn/)
 | 名称 | 操作系统 | 地址 |
@@ -16,8 +16,6 @@
 CTRL+A网页全选，CTRL+C复制，右键点击任务栏v2rayN客户端图标，左键点击从剪贴板批量导入URL，即可一键导入所有v2ray节点  
 ## v2ray免费节点订阅  
 ``` 
-vmess://eyJ2IjoiMiIsInBzIjoi8J+HrfCfh7Ag6aaZ5rivLTFCIiwiYWRkIjoieGcuZGFzaHVhaS5jeW91IiwicG9ydCI6IjE5OTAxIiwidHlwZSI6Im5vbmUiLCJpZCI6IjM4NjY3OWM1LTFiZTgtNDU0OS1iMjUwLTllMWY1MDg0YTAyOCIsImFpZCI6IjAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsImhvc3QiOiJ4Zy5kYXNodWFpLmN5b3UiLCJ0bHMiOiIifQ==
-vmess://eyJ2IjoiMiIsInBzIjoi8J+HrfCfh7Ag6aaZ5rivLTFDIiwiYWRkIjoieGcuZGFzaHVhaS5jeW91IiwicG9ydCI6IjE5OTAxIiwidHlwZSI6Im5vbmUiLCJpZCI6IjFmMDVjMTEwLWMyYjctNDA4YS04YTA5LTgyMjljNTZkOGJhNiIsImFpZCI6IjAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsImhvc3QiOiJ4Zy5kYXNodWFpLmN5b3UiLCJ0bHMiOiIifQ==
-vmess://eyJ2IjoiMiIsInBzIjoi8J+HrfCfh7Ag6aaZ5rivLTFBIiwiYWRkIjoieGcuZGFzaHVhaS5jeW91IiwicG9ydCI6IjE5OTAxIiwidHlwZSI6Im5vbmUiLCJpZCI6IjIyMjBjOTc3LWVmMDYtNDM5Mi1hNDI4LWU5MzJiNjk2YWQ0NiIsImFpZCI6IjAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsImhvc3QiOiJ4Zy5kYXNodWFpLmN5b3UiLCJ0bHMiOiIifQ==
+vmess://eyJ2IjoiMiIsInBzIjoi8J+HrfCfh7Ag6aaZ5rivIiwiYWRkIjoieGcuZGFzaHVhaS5jeW91IiwicG9ydCI6IjE5OTAxIiwidHlwZSI6Im5vbmUiLCJpZCI6IjE0ZTY1YmJmLTFjZmUtNDI4My1iNDM3LTVmYjIzNjE1MjI2ZCIsImFpZCI6IjAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsImhvc3QiOiJ4Zy5kYXNodWFpLmN5b3UiLCJ0bHMiOiIifQ==
 ```
 
