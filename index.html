@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://res.wx.qq.com/t/wx_fed/weui-source/res/2.5.16/weui.min.css">
+    <script type="text/javascript" src="https://res.wx.qq.com/t/wx_fed/weui.js/res/1.2.21/weui.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>免费V2Ray/Clash/SingBox节点分享 - 科学上网VPN推荐</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="V2Ray、Clash、SingBox免费节点每日更新，提供高速稳定的科学上网和代理服务，附详细教程和订阅链接，支持安卓、iOS、Windows、Mac设备，轻松翻墙。">
+    <meta name="keywords" content="V2Ray免费节点, Clash免费节点, SingBox订阅, VPN免费, 科学上网, 翻墙, 代理, 高速节点, 免费科学上网">
+    <meta name="author" content="仙葫说">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="免费V2Ray/Clash/SingBox节点分享 - 科学上网VPN推荐">
+    <meta property="og:description" content="提供最新的V2Ray、Clash、SingBox免费订阅节点，支持多设备科学上网和翻墙，获取高速稳定的代理服务。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://share.colors.nyc.mn/">
+
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="免费V2Ray/Clash/SingBox节点分享 - 科学上网VPN推荐">
+    <meta name="twitter:description" content="每天更新V2Ray、Clash、SingBox免费节点，支持科学上网和代理服务，让你轻松获取高速稳定的网络连接。">
+
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://share.colors.nyc.mn/">
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="hZlMCYpJCTBSRS0VY3hcQA" async></script>
+
+</head>
+
+<body class="bg-white">
+    <div id="app" class="container mx-auto px-4 flex flex-col items-center justify-center min-h-screen">
+        <div class="max-w-md w-full bg-white p-8 border border-black rounded-sm shadow-sm">
+            <h1 class="text-3xl font-black text-center text-black tracking-tighter uppercase">免费订阅分享</h1>
+            <p class="mt-6 text-center text-black leading-relaxed">
+                关注微信公众号
+                <span class="bg-black text-white px-1 font-bold">仙葫说</span>
+                回复
+                <span class="bg-black text-white px-1 font-bold">【验证码】</span>
+                获取验证码，并在下方输入验证码。
+            </p>
+
+
+            <div class="mt-8">
+                <label for="subscriptionType"
+                    class="block text-xs font-bold uppercase tracking-widest text-black">选择订阅类型</label>
+                <select id="subscriptionType" v-model="selectedType"
+                    class="mt-2 w-full px-4 py-3 border border-black rounded-none focus:outline-none focus:ring-2 focus:ring-black appearance-none bg-white text-black">
+                    <option value="" disabled selected>请选择...</option>
+
+                    <option value="clash">Clash</option>
+                    <option value="v2ray">V2Ray</option>
+                </select>
+            </div>
+            <div class="mt-6">
+                <label for="secretCode"
+                    class="block text-xs font-bold uppercase tracking-widest text-black">输入验证码</label>
+                <input id="secretCode" v-model="secretCode" type="text" placeholder="6位验证码"
+                    class="mt-2 w-full px-4 py-3 border border-black rounded-none focus:outline-none focus:ring-2 focus:ring-black bg-white text-black" />
+                <p v-if="errorMessage" class="mt-2 text-xs font-bold text-black uppercase tracking-tighter">! {{
+                    errorMessage }}</p>
+            </div>
+            <button @click="handleLink" :disabled="isLoading"
+                class="mt-8 w-full bg-black hover:bg-zinc-800 text-white font-bold py-4 px-4 rounded-none transition-all duration-200 disabled:bg-zinc-200 disabled:text-zinc-500 uppercase tracking-widest">
+                获取订阅
+            </button>
+
+            <div v-if="subscriptionLink" class="mt-8 pt-8 border-t border-black">
+                <p class="text-center text-xs font-bold uppercase tracking-widest text-black">订阅链接</p>
+                <p
+                    class="mt-2 text-center text-black font-mono text-xs break-all border border-zinc-100 p-3 bg-zinc-50">
+                    {{ subscriptionLink }}</p>
+                <button @click="copyToClipboard"
+                    class="mt-4 w-full border border-black hover:bg-zinc-100 text-black font-bold py-3 px-4 rounded-none transition-all duration-200 uppercase tracking-widest">
+                    复制到剪贴板
+                </button>
+            </div>
+
+            <p class="mt-8 text-center text-[10px] uppercase tracking-[0.2em] text-zinc-400">重要提示：免费订阅有效期为1天</p>
+        </div>
+
+        <!-- 友链 -->
+        <div class="mt-8 opacity-40 hover:opacity-100 transition-opacity duration-300">
+            <a class="text-[10px] uppercase tracking-widest text-black border-b border-black pb-1"
+                href="https://reader.colors.nyc.mn/">有声小说</a>
+        </div>
+    </div>
+
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    selectedType: "",
+                    secretCode: "",
+                    errorMessage: "",
+                    isLoading: false,
+                    loadingText: "请求中。",
+                    subscriptionLink: "",
+                    loadingInterval: null,
+                };
+            },
+            methods: {
+                handleLink() {
+                    if (!this.selectedType) {
+                        this.errorMessage = "请选择订阅类型";
+                        return;
+                    }
+                    if (!this.secretCode || this.secretCode.length !== 6) {
+                        this.errorMessage = "请输入有效的6位验证码";
+                        return;
+                    }
+
+                    this.errorMessage = "";
+
+                    const loading = weui.loading('加载中...');
+
+                    const link = `https://api.nicevoice.nyc.mn/g1?t=${this.selectedType}&code=${this.secretCode}`;
+                    this.isLoading = true
+                    fetch(link)
+                        .then((response) => {
+
+                            if (!response.ok) {
+                                throw new Error("网络响应不正常");
+                            }
+                            return response.json();
+                        })
+                        .then((data) => {
+                            if (data.code === 200) {
+                                this.subscriptionLink = data.data;
+                            } else {
+                                this.errorMessage = data.message;
+                            }
+                        })
+                        .catch(() => {
+                            this.errorMessage = "请求失败，请稍后重试";
+                        })
+                        .finally(() => {
+                            loading.hide()
+                            this.isLoading = false
+                        });
+                },
+                copyToClipboard() {
+                    navigator.clipboard.writeText(this.subscriptionLink).then(() => {
+                        weui.toast('已复制', { duration: 1000 });
+                    });
+                },
+            },
+        }).mount('#app');
+    </script>
+    <a href="https://sopilot.net/submitdir/share.colors.nyc.mn" target="_blank" rel="noopener dofollow" style="display:inline-flex;align-items:center;gap:12px;padding:8px 16px;border-radius:16px;text-decoration:none;border:1px solid;background:#FFFFFF;border-color:#E5E7EB;color:#111827">
+  <img src="https://sopilot.net/logo.png" alt="SoPilot" width="24" height="24" style="display:block" />
+  <span style="line-height:1.1"><span style="font-weight:600;opacity:.8;letter-spacing:.06em;font-size:11px;display:block">FEATURED ON</span><span style="font-weight:800;font-size:14px;display:block">SoPilot</span></span>
+</a>
+</body>
+
+</html>
